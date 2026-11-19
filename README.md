@@ -1,3 +1,4 @@
+# WG
 # Agent Mode 點數定價與單體經濟學計算機 (Unit Economics & Pricing Simulator)
 
 這是一個互動式點數定價與單體經濟學計算機。透過單一純靜態網頁，即可動態試算 AI Agent 工作流在不同運算成本、稅費折損與目標毛利率下的最低扣點定價、新使用者免費額度體驗次數（Aha Moment），以及定價階梯敏感度。
@@ -31,3 +32,21 @@
 .
 ├── index.html      # 互動式網頁計算機主程式（含樣式與計算邏輯）
 └── README.md       # 專案說明與公式文件
+
+
+# GenApe SEO Pillar Page 線框原型 (`pillar_page_wireframe.html`)
+
+這是一個專為呈現 **GenApe 核心主文章（Pillar Page）SEO 內容架構與內部連結權重設計** 的互動式網頁線框原型（Wireframe），可直接部署於 GitHub Pages 或作為商業簡報展示使用。
+
+## ✨ 核心特色
+
+* **雙視角一鍵切換**：
+  * **🔍 SEO 結構標註視角**：清楚標示 `H1 / H2 / H3` 標題階層、`301 轉址承接錨點`（修復舊版 404 簡報與試用頁斷鏈），以及 `內部連結 ➔ 子文章 1 / 2` 的商業錨點文字。
+  * **👁️ 讀者閱讀視角**：隱藏技術標籤，還原乾淨的商業文章排版與轉換漏斗介面。
+* **完整內容骨架與目錄跳轉**：內建可點擊的快速目錄（Table of Contents）、2026 付費方案對比表、FAQ 折疊區塊，以及右側粘性（Sticky）`免費領取 200 點` 轉換卡片。
+* **零依賴單檔部署**：純靜態 HTML 封裝（內嵌 Tailwind CSS CDN 與原生 JS），無需後端或建置環境。
+
+## 🚀 快速使用
+
+1. 直接用瀏覽器開啟 `pillar_page_wireframe.html` 即可預覽與截圖。
+2. 或上傳至 GitHub Repository 並開啟 **Settings $\rightarrow$ Pages**，即可獲得可公開分享的線上展示網址。
