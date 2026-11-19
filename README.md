@@ -25,15 +25,6 @@
    $$\text{理論最低扣點} = \frac{\text{單次底層運算成本}}{(1 - \text{目標毛利率}) \times \text{票面單點價值} \times \text{有效淨營收保留率}}$$
    *商業建議定價則採 `CEILING(理論最低扣點, 5)` 進位至 5 的倍數，以符合 SaaS / AI 產品常見的定價心理慣例。*
 
-
-## 📂 專案結構
-
-```text
-.
-├── index.html      # 互動式網頁計算機主程式（含樣式與計算邏輯）
-└── README.md       # 專案說明與公式文件
-
-
 # GenApe SEO Pillar Page 線框原型 (`pillar_page_wireframe.html`)
 
 這是一個專為呈現 **GenApe 核心主文章（Pillar Page）SEO 內容架構與內部連結權重設計** 的互動式網頁線框原型（Wireframe），可直接部署於 GitHub Pages 或作為商業簡報展示使用。
@@ -50,3 +41,6 @@
 
 1. 直接用瀏覽器開啟 `pillar_page_wireframe.html` 即可預覽與截圖。
 2. 或上傳至 GitHub Repository 並開啟 **Settings $\rightarrow$ Pages**，即可獲得可公開分享的線上展示網址。
+
+
+```text
