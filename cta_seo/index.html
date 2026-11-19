@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GenApe SEO 與 CTA 轉換策略 Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: Inter, 'Noto Sans TC', sans-serif; }
+    .mode-btn[aria-pressed="true"] { background:#4f46e5;color:white;box-shadow:0 1px 3px #0002; }
+    .mode-btn[aria-pressed="false"] { color:#cbd5e1; }
+    .seo-only { display:block; }
+    body.reader-mode .seo-only { display:none !important; }
+    .wireframe { background-image:repeating-linear-gradient(-45deg,#f8fafc,#f8fafc 10px,#f1f5f9 10px,#f1f5f9 20px); }
+    .hidden-view { display:none !important; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <!-- Demo 控制列：切換兩個題目的展示畫面 -->
+  <div class="sticky top-0 z-50 bg-slate-900 text-white border-b border-slate-700 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="rounded bg-indigo-500 px-2 py-1 text-[10px] font-extrabold tracking-wider">DEMO</span>
+        <span class="font-bold text-sm">GenApe SEO 流量與產品轉換設計</span>
+      </div>
+      <div class="flex flex-wrap gap-2 text-xs font-bold">
+        <button id="landingTab" class="mode-btn rounded-lg px-3 py-2" aria-pressed="true" onclick="switchView('landing')">① Landing Page CTA 設計</button>
+        <button id="clusterTab" class="mode-btn rounded-lg px-3 py-2" aria-pressed="false" onclick="switchView('cluster')">② Topic Cluster SEO 架構</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= LANDING PAGE CTA DEMO ================= -->
+  <main id="landingView" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <div>
+        <p class="text-xs font-bold tracking-widest text-indigo-600 uppercase">Conversion landing page</p>
+        <h1 class="mt-1 text-2xl sm:text-3xl font-black text-slate-900">讓 AI 幫你改寫文字，幾秒產出更自然的內容</h1>
+        <p class="mt-2 text-sm text-slate-500">搜尋「AI 改寫」、「文章改寫工具」進站後，第一眼就能理解價值並開始體驗。</p>
+      </div>
+      <span class="seo-only rounded-full bg-indigo-100 px-3 py-1.5 text-xs font-bold text-indigo-700">首屏價值主張＋低門檻試用動線</span>
+    </div>
+
+    <!-- 首屏：左側價值主張，右側可操作的產品體驗 -->
+    <section class="grid lg:grid-cols-2 gap-6 items-stretch">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-950 via-indigo-950 to-indigo-800 p-7 sm:p-10 text-white flex flex-col justify-center">
+        <span class="inline-flex w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-indigo-100">GenApe AI 寫作與改寫</span>
+        <h2 class="mt-5 text-3xl sm:text-4xl font-black leading-tight">不用重寫整篇，<br><span class="text-sky-300">一句指令</span>讓文字更到位。</h2>
+        <p class="mt-5 max-w-lg text-sm sm:text-base leading-7 text-indigo-100">貼上文章、商品文案或工作訊息，選擇想要的語氣，快速調整表達方式。先體驗改寫流程，再決定是否註冊。</p>
+        <div class="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <div class="rounded-xl border border-white/15 bg-white/10 p-3">✓ 繁體中文情境文案</div>
+          <div class="rounded-xl border border-white/15 bg-white/10 p-3">✓ 自然、正式、精簡語氣</div>
+          <div class="rounded-xl border border-white/15 bg-white/10 p-3">✓ 一鍵產生改寫版本</div>
+          <div class="rounded-xl border border-white/15 bg-white/10 p-3">✓ 新用戶免費 200 Credits</div>
+        </div>
+        <p class="mt-6 text-xs text-indigo-200">新用戶免費額度依正式產品活動與方案規則為準。</p>
+      </div>
+
+      <!-- 體驗區：Demo 模擬免註冊輸入與改寫 -->
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
+        <div class="flex items-center justify-between gap-3">
+          <div>
+            <p class="text-xs font-bold tracking-wider text-indigo-600">TRY IT NOW</p>
+            <h2 class="mt-1 text-xl font-extrabold text-slate-900">先貼上一段文字，免費試試改寫效果</h2>
+          </div>
+          <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">免註冊開始</span>
+        </div>
+        <label for="sourceText" class="mt-6 block text-sm font-bold text-slate-700">你的原始文字</label>
+        <textarea id="sourceText" rows="5" class="mt-2 w-full rounded-xl border border-slate-300 p-4 text-sm outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100" placeholder="例如：我們的產品可以幫助使用者快速完成工作，讓整個流程變得更加有效率。">我們的產品可以幫助使用者快速完成工作，讓整個流程變得更加有效率。</textarea>
+        <div class="mt-4 grid sm:grid-cols-2 gap-3">
+          <div>
+            <label for="tone" class="block text-sm font-bold text-slate-700">選擇改寫語氣</label>
+            <select id="tone" class="mt-2 w-full rounded-xl border border-slate-300 bg-white p-3 text-sm">
+              <option value="自然流暢">自然流暢</option>
+              <option value="專業正式">專業正式</option>
+              <option value="簡潔有力">簡潔有力</option>
+              <option value="親切口語">親切口語</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-slate-700">使用情境</label>
+            <div class="mt-2 rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm text-slate-600">文章、社群貼文、商品文案</div>
+          </div>
+        </div>
+        <button onclick="rewriteDemo()" class="mt-5 w-full rounded-xl bg-indigo-600 px-5 py-4 text-sm font-extrabold text-white shadow-lg shadow-indigo-200 transition hover:bg-indigo-700">✨ 免費體驗 AI 一鍵改寫</button>
+        <p class="mt-3 text-center text-xs text-slate-400">Demo 僅模擬互動流程，並未連接 GenApe API 或實際扣除 Credits。</p>
+
+        <div id="resultPanel" class="hidden mt-6 rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
+          <div class="flex items-center justify-between gap-2">
+            <h3 class="font-extrabold text-indigo-950">改寫結果預覽</h3>
+            <span class="rounded-full bg-white px-2 py-1 text-[10px] font-bold text-indigo-700">DEMO RESULT</span>
+          </div>
+          <p id="resultText" class="mt-3 text-sm leading-7 text-slate-700"></p>
+          <div class="mt-4 rounded-xl bg-white p-4 border border-indigo-100">
+            <p class="text-sm font-extrabold text-slate-900">想複製完整結果並繼續使用嗎？</p>
+            <p class="mt-1 text-xs leading-5 text-slate-500">註冊即可領取新用戶免費額度，繼續體驗 AI 寫作、改寫與其他工具。</p>
+            <a href="https://genape.ai/" target="_blank" rel="noopener noreferrer" class="mt-3 block rounded-lg bg-indigo-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-indigo-700">免費註冊，領取 200 Credits →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 心理門檻降低 -->
+    <section class="grid sm:grid-cols-3 gap-4">
+      <div class="rounded-2xl border border-slate-200 bg-white p-5">
+        <div class="text-2xl">📝</div><h3 class="mt-2 font-extrabold">不用先想 Prompt</h3><p class="mt-1 text-sm leading-6 text-slate-500">直接貼上既有文字，降低第一次使用的學習成本。</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-5">
+        <div class="text-2xl">⚡</div><h3 class="mt-2 font-extrabold">先看到改寫效果</h3><p class="mt-1 text-sm leading-6 text-slate-500">以結果預覽呈現產品價值，減少註冊前的不確定感。</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-5">
+        <div class="text-2xl">🎁</div><h3 class="mt-2 font-extrabold">免費額度接續體驗</h3><p class="mt-1 text-sm leading-6 text-slate-500">在使用者產生興趣後，再以 200 Credits 引導註冊。</p>
+      </div>
+    </section>
+
+    <!-- 漏斗說明 -->
+    <section class="rounded-2xl border border-slate-200 bg-white p-6">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">CTA 轉換動線</h2><span class="seo-only text-xs font-mono text-indigo-600">Search → Try → Value → Signup</span>
+      </div>
+      <div class="mt-5 grid grid-cols-2 lg:grid-cols-4 gap-3 text-center">
+        <div class="rounded-xl bg-slate-50 p-4"><b class="text-indigo-700">01</b><p class="mt-1 text-sm font-bold">搜尋進站</p><p class="mt-1 text-xs text-slate-500">對應搜尋意圖</p></div>
+        <div class="rounded-xl bg-slate-50 p-4"><b class="text-indigo-700">02</b><p class="mt-1 text-sm font-bold">貼上文字</p><p class="mt-1 text-xs text-slate-500">不先要求註冊</p></div>
+        <div class="rounded-xl bg-slate-50 p-4"><b class="text-indigo-700">03</b><p class="mt-1 text-sm font-bold">看到結果</p><p class="mt-1 text-xs text-slate-500">感受產品價值</p></div>
+        <div class="rounded-xl bg-emerald-50 p-4"><b class="text-emerald-700">04</b><p class="mt-1 text-sm font-bold">免費註冊</p><p class="mt-1 text-xs text-slate-500">領取免費額度</p></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= TOPIC CLUSTER DEMO ================= -->
+  <main id="clusterView" class="hidden-view max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <article class="lg:col-span-8 rounded-2xl border border-slate-200 bg-white p-6 sm:p-10 shadow-sm space-y-8">
+        <nav class="text-xs text-slate-400">首頁　/　AI 生產力指南　/　GenApe 完整教學</nav>
+        <header class="border-b border-slate-100 pb-6 space-y-4">
+          <div class="flex flex-wrap items-center gap-2"><span class="seo-only rounded bg-indigo-600 px-2 py-1 text-xs font-bold text-white">H1｜Pillar Page</span><span class="text-xs text-slate-400">核心主文章</span></div>
+          <h1 class="text-2xl sm:text-3xl font-black leading-tight text-slate-900">2026 GenApe 生成猿完整教學與實測評價：從繁中 AI 寫作改寫、一鍵簡報到電商行銷全攻略</h1>
+          <p class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-4 text-sm leading-6 text-slate-500"><b class="text-slate-700">首段摘要：</b>回應「GenApe 教學」、「GenApe 評價」與「AI 寫作工具」等搜尋需求，說明產品定位、核心工作流、免費額度與方案選擇。</p>
+          <div class="rounded-xl bg-slate-50 p-4">
+            <p class="text-xs font-bold text-slate-500">文章目錄</p>
+            <div class="mt-2 grid sm:grid-cols-2 gap-2 text-sm text-indigo-700 font-semibold">
+              <a href="#what">1. GenApe 是什麼？</a><a href="#workflow">2. 四大工作流教學</a><a href="#pricing">3. 免費額度與方案</a><a href="#faq">4. 常見問題</a>
+            </div>
+          </div>
+        </header>
+
+        <section id="what" class="seo-outline rounded-xl border border-slate-200 p-5 space-y-3">
+          <span class="seo-only text-xs font-mono font-bold text-indigo-600">H2｜產品定位</span>
+          <h2 class="text-xl font-extrabold">GenApe 生成猿是什麼？為什麼適合繁體中文商業工作流？</h2>
+          <div class="pl-4 border-l-2 border-indigo-200"><span class="seo-only text-xs font-mono text-indigo-600">H3</span><h3 class="font-bold">台灣團隊研發優勢：在地語氣與繁體中文內容</h3><p class="mt-1 text-sm text-slate-500">介紹在地化情境、語氣與常見商業內容需求。</p></div>
+          <div class="pl-4 border-l-2 border-indigo-200"><span class="seo-only text-xs font-mono text-indigo-600">H3</span><h3 class="font-bold">一站式整合 AI 寫作改寫、電商生圖與簡報</h3><p class="mt-1 text-sm text-slate-500">說明多種工具如何支援不同工作流程。</p></div>
+        </section>
+
+        <section id="workflow" class="rounded-xl border-2 border-indigo-200 bg-indigo-50/30 p-5 space-y-5">
+          <div><span class="seo-only text-xs font-mono font-bold text-indigo-600">H2｜Topic Cluster 連結樞紐</span><h2 class="mt-1 text-xl font-extrabold">GenApe 4 大高轉換商業工作流實戰教學</h2></div>
+          <div class="rounded-xl border border-slate-200 bg-white p-4">
+            <span class="seo-only text-xs font-bold text-teal-700">H3 → Cluster Article 1</span>
+            <h3 class="mt-1 font-bold">工作流一：SEO 長文生成與局部微調技巧</h3>
+            <p class="mt-2 text-sm text-slate-500">示範如何建立文章架構、產生初稿，再針對段落調整語氣與內容。</p>
+            <a href="#cluster1" class="mt-3 inline-block text-sm font-bold text-teal-700 underline">延伸閱讀：用 GenApe 一站完成 SEO 長文與改寫 →</a>
+          </div>
+          <div class="rounded-xl border border-slate-200 bg-white p-4">
+            <span class="seo-only text-xs font-bold text-teal-700">H3 → Cluster Article 2</span>
+            <h3 class="mt-1 font-bold">工作流二：電商商品描述改寫與商品圖製作</h3>
+            <p class="mt-2 text-sm text-slate-500">說明如何整理商品特色、產生多平台商品文案，並搭配商品視覺素材。</p>
+            <a href="#cluster2" class="mt-3 inline-block text-sm font-bold text-teal-700 underline">延伸閱讀：電商商品描述改寫與一鍵去背實戰 →</a>
+          </div>
+          <div class="rounded-xl border border-slate-200 bg-white p-4">
+            <span class="seo-only text-xs font-bold text-indigo-600">H3｜延伸工作流</span>
+            <h3 class="font-bold">工作流三：研究資料轉簡報與短影音腳本</h3><p class="mt-2 text-sm text-slate-500">展示長篇資料如何整理成簡報大綱與內容腳本。</p>
+          </div>
+          <div class="rounded-xl bg-indigo-700 p-5 text-white flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div><p class="font-extrabold">想親自測試上述工作流？</p><p class="mt-1 text-xs text-indigo-100">註冊體驗 GenApe AI 工具與新用戶免費額度。</p></div>
+            <a href="https://genape.ai/" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-white px-4 py-3 text-center text-sm font-extrabold text-indigo-700">免費體驗 GenApe →</a>
+          </div>
+        </section>
+
+        <section id="pricing" class="rounded-xl border border-slate-200 p-5 space-y-3">
+          <span class="seo-only text-xs font-mono font-bold text-indigo-600">H2｜商業決策內容</span><h2 class="text-xl font-extrabold">GenApe 免費額度與付費方案怎麼選？</h2>
+          <h3 class="font-bold">新用戶免費額度使用建議</h3><p class="text-sm text-slate-500">說明免費額度適合的體驗情境，以及如何先測試最常用的功能。</p>
+          <h3 class="font-bold">點數包與訂閱方案比較</h3><p class="text-sm text-slate-500">依使用頻率、功能需求與預算協助讀者評估方案。</p>
+        </section>
+
+        <section id="faq" class="rounded-xl border border-slate-200 p-5 space-y-3">
+          <span class="seo-only text-xs font-mono font-bold text-indigo-600">H2｜FAQ 長尾搜尋</span><h2 class="text-xl font-extrabold">GenApe 常見問題</h2>
+          <h3 class="font-bold">免費試用是否需要綁定信用卡？</h3><p class="text-sm text-slate-500">依實際註冊流程與最新方案規則說明。</p>
+          <h3 class="font-bold">生成內容是否可以商業使用？</h3><p class="text-sm text-slate-500">連結至官方服務條款與授權說明。</p>
+        </section>
+
+        <!-- 兩篇 Cluster 文章的示意卡片 -->
+        <section class="border-t border-slate-200 pt-6 space-y-4">
+          <h2 class="font-extrabold">實戰工作流系列文章</h2>
+          <div id="cluster1" class="rounded-xl border border-teal-200 bg-teal-50/40 p-4"><span class="text-xs font-bold text-teal-700">CLUSTER ARTICLE 1</span><h3 class="mt-1 font-bold">告別瀏覽器開 10 個分頁！用 GenApe 一站完成 SEO 長文與改寫</h3><p class="mt-1 text-sm text-slate-500">聚焦 SEO 寫作、長文架構與局部改寫的操作教學。</p><a href="#top" class="mt-2 inline-block text-sm font-bold text-indigo-700 underline">回到 GenApe 完整教學主文章 ↑</a></div>
+          <div id="cluster2" class="rounded-xl border border-teal-200 bg-teal-50/40 p-4"><span class="text-xs font-bold text-teal-700">CLUSTER ARTICLE 2</span><h3 class="mt-1 font-bold">電商賣家必學：GenApe 商品描述改寫與一鍵去背實戰</h3><p class="mt-1 text-sm text-slate-500">聚焦商品賣點、平台文案與商品視覺素材。</p><a href="#top" class="mt-2 inline-block text-sm font-bold text-indigo-700 underline">回到 GenApe 完整教學主文章 ↑</a></div>
+        </section>
+      </article>
+
+      <aside class="lg:col-span-4 space-y-5 lg:sticky lg:top-24">
+        <div class="rounded-2xl bg-slate-900 p-6 text-white shadow-xl">
+          <span class="rounded-full bg-indigo-500/20 px-3 py-1 text-xs font-bold text-indigo-200">Sticky Sidebar CTA</span>
+          <h2 class="mt-4 text-2xl font-black">免費體驗 GenApe AI 工作台</h2>
+          <p class="mt-2 text-sm leading-6 text-slate-300">在讀者閱讀文章的不同階段，提供持續可見的產品體驗入口。</p>
+          <a href="https://genape.ai/" target="_blank" rel="noopener noreferrer" class="mt-5 block rounded-xl bg-indigo-500 px-4 py-3 text-center text-sm font-extrabold hover:bg-indigo-400">立即免費體驗 →</a>
+        </div>
+        <div class="seo-only rounded-2xl border border-indigo-200 bg-white p-5">
+          <h3 class="font-extrabold">Internal Link 權重引流規則</h3>
+          <ol class="mt-3 list-decimal space-y-3 pl-5 text-xs leading-5 text-slate-600">
+            <li><b class="text-slate-900">主文章導向子文章：</b>在對應 H3 段落使用描述性錨點，連到更深入的教學。</li>
+            <li><b class="text-slate-900">子文章回連主文章：</b>在前段與文末放置情境相關的回連，建立主題關聯。</li>
+            <li><b class="text-slate-900">CTA 導向產品：</b>在教學與方案評估段落放置清楚的試用入口。</li>
+            <li><b class="text-slate-900">連結自然且有用：</b>依讀者下一步需求安排連結，不以堆疊連結數量取代內容品質。</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-400">GenApe SEO & Conversion Wireframe Demo｜示意介面，非正式產品功能</footer>
+
+  <script>
+    function switchView(view) {
+      const landing = document.getElementById('landingView');
+      const cluster = document.getElementById('clusterView');
+      const landingTab = document.getElementById('landingTab');
+      const clusterTab = document.getElementById('clusterTab');
+      const isLanding = view === 'landing';
+      landing.classList.toggle('hidden-view', !isLanding);
+      cluster.classList.toggle('hidden-view', isLanding);
+      landingTab.setAttribute('aria-pressed', String(isLanding));
+      clusterTab.setAttribute('aria-pressed', String(!isLanding));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 僅供簡報展示：以簡單文字規則模擬改寫，不呼叫 AI API。
+    function rewriteDemo() {
+      const input = document.getElementById('sourceText').value.trim();
+      const tone = document.getElementById('tone').value;
+      if (!input) {
+        alert('請先貼上一段想改寫的文字。');
+        document.getElementById('sourceText').focus();
+        return;
+      }
+      let output = input;
+      if (tone === '自然流暢') output = '透過 GenApe，使用者能更快速地完成工作，讓整體流程更加順暢，也能把時間留給更重要的任務。';
+      if (tone === '專業正式') output = 'GenApe 協助使用者提升工作處理效率，優化作業流程，進而有效降低內容產製所需的時間成本。';
+      if (tone === '簡潔有力') output = '用 GenApe 加快工作效率，簡化流程，讓產出更快速。';
+      if (tone === '親切口語') output = '有了 GenApe，很多工作不用再慢慢處理，幫你更快完成任務，整個流程也更輕鬆！';
+      document.getElementById('resultText').textContent = output;
+      document.getElementById('resultPanel').classList.remove('hidden');
+      document.getElementById('resultPanel').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  </script>
+</body>
+</html>
