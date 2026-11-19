@@ -1,5 +1,5 @@
 # WG
-# Agent Mode 點數定價與單體經濟學計算機 (Unit Economics & Pricing Simulator)
+# Agent Mode 點數定價與單體經濟學計算機 
 
 這是一個互動式點數定價與單體經濟學計算機。透過單一純靜態網頁，即可動態試算 AI Agent 工作流在不同運算成本、稅費折損與目標毛利率下的最低扣點定價、新使用者免費額度體驗次數（Aha Moment），以及定價階梯敏感度。
 
