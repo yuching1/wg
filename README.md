@@ -25,22 +25,16 @@
    $$\text{理論最低扣點} = \frac{\text{單次底層運算成本}}{(1 - \text{目標毛利率}) \times \text{票面單點價值} \times \text{有效淨營收保留率}}$$
    *商業建議定價則採 `CEILING(理論最低扣點, 5)` 進位至 5 的倍數，以符合 SaaS / AI 產品常見的定價心理慣例。*
 
-# GenApe SEO Pillar Page 線框原型 (`pillar_page_wireframe.html`)
+# GenApe SEO Pillar Page Demo 
 
-這是一個專為呈現 **GenApe 核心主文章（Pillar Page）SEO 內容架構與內部連結權重設計** 的互動式網頁線框原型（Wireframe），可直接部署於 GitHub Pages 或作為商業簡報展示使用。
+這是一個專為呈現 **GenApe 核心主文章（Pillar Page）SEO 內容架構與內部連結權重設計** 的互動式網頁線框原型（Wireframe）。
 
 ## ✨ 核心特色
 
 * **雙視角一鍵切換**：
-  * **🔍 SEO 結構標註視角**：清楚標示 `H1 / H2 / H3` 標題階層、`301 轉址承接錨點`（修復舊版 404 簡報與試用頁斷鏈），以及 `內部連結 ➔ 子文章 1 / 2` 的商業錨點文字。
+  * **🔍 SEO 結構標註視角**：清楚標示 `H1 / H2 / H3` 標題階層、`301 轉址承接錨點`，以及 `內部連結 ➔ 子文章 1 / 2` 的商業錨點文字。
   * **👁️ 讀者閱讀視角**：隱藏技術標籤，還原乾淨的商業文章排版與轉換漏斗介面。
 * **完整內容骨架與目錄跳轉**：內建可點擊的快速目錄（Table of Contents）、2026 付費方案對比表、FAQ 折疊區塊，以及右側粘性（Sticky）`免費領取 200 點` 轉換卡片。
 * **零依賴單檔部署**：純靜態 HTML 封裝（內嵌 Tailwind CSS CDN 與原生 JS），無需後端或建置環境。
-
-## 🚀 快速使用
-
-1. 直接用瀏覽器開啟 `pillar_page_wireframe.html` 即可預覽與截圖。
-2. 或上傳至 GitHub Repository 並開啟 **Settings $\rightarrow$ Pages**，即可獲得可公開分享的線上展示網址。
-
 
 ```text
